@@ -1,0 +1,24 @@
+/*
+
+# Top level files
+!.tmux.conf
+!.gitignore
+
+# Files in sub-directories
+!.config/
+.config/*
+
+# nvim configuration
+!.config/nvim
+.config/nvim/*
+!.config/nvim/init.vim
+
+# fish configuration
+!.config/fish
+.config/fish/*
+!.config/fish/config.fish
+
+# fish functions
+!.config/fish/functions
+.config/fish/functions/*
+!.config/fish/functions/fish_user_key_bindings.fish

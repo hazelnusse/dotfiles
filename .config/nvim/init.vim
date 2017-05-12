@@ -24,6 +24,7 @@ if dein#load_state('$HOME/.local/share/dein.vim')
   call dein#add('flazz/vim-colorschemes')
   call dein#add('vim-syntastic/syntastic')
   call dein#add('scrooloose/nerdtree')
+  call dein#add('vim-airline/vim-airline')
 
   " Required:
   call dein#end()

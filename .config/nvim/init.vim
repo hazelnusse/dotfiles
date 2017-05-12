@@ -23,6 +23,7 @@ if dein#load_state('/home/luke/.local/share/dein.vim')
   call dein#add('WolfgangMehner/c-support')
   call dein#add('flazz/vim-colorschemes')
   call dein#add('vim-syntastic/syntastic')
+  call dein#add('scrooloose/nerdtree')
 
 
   " Required:
@@ -133,5 +134,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"
-"
+
+" NERDTree
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+map <C-n> :NERDTreeToggle<CR>
+

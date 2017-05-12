@@ -4,15 +4,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/luke/.local/share/dein.vim/repos/github.com/Shougo/dein.vim
+set runtimepath+=$HOME/.local/share/dein.vim/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/home/luke/.local/share/dein.vim')
-  call dein#begin('/home/luke/.local/share/dein.vim')
+if dein#load_state('$HOME/.local/share/dein.vim')
+  call dein#begin('$HOME/.local/share/dein.vim')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/home/luke/.local/share/dein.vim/repos/github.com/Shougo/dein.vim')
+  call dein#add('$HOME/.local/share/dein.vim/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   "call dein#add('Shougo/neosnippet.vim')
@@ -24,7 +24,6 @@ if dein#load_state('/home/luke/.local/share/dein.vim')
   call dein#add('flazz/vim-colorschemes')
   call dein#add('vim-syntastic/syntastic')
   call dein#add('scrooloose/nerdtree')
-
 
   " Required:
   call dein#end()

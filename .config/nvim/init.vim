@@ -25,6 +25,7 @@ if dein#load_state('$HOME/.local/share/dein.vim')
   call dein#add('vim-syntastic/syntastic')
   call dein#add('scrooloose/nerdtree')
   call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
 
   " Required:
   call dein#end()
@@ -59,7 +60,7 @@ set textwidth=78                " Wrap lines longer than 79 characters
 set formatoptions+=t            " Make wrapping occur at word boundaries
 set swapfile
 set dir=~/tmp                   " Directory for swapfiles
-set clipboard=unnamedplus
+set clipboard=unnamed
 set mouse=a
 set ruler
 set autoread                    " read open files again when changed outside Vim
@@ -83,6 +84,7 @@ au FileType markdown setl shiftwidth=4 softtabstop=4 et
 au FileType groovy setl shiftwidth=4 softtabstop=4 et
 au FileType cmake setl shiftwidth=4 softtabstop=4 et
 au FileType matlab setl shiftwidth=4 softtabstop=4 et
+au FileType sh setl shiftwidth=4 softtabstop=4 et
 
 set list
 set listchars=tab:\|\ 
@@ -145,3 +147,13 @@ let g:synastic_cpp_no_include_search = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
 
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='luna'
+
+" Tab navigation
+nmap <Left> gT
+nmap <Right> gt

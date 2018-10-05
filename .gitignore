@@ -20,3 +20,6 @@
 
 # fish functions
 !.config/fish/functions
+
+# rxvt-unicode
+!.Xdefaults
